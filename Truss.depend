@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1586774721 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\main.cpp
+	<iostream>
+	"Node.h"
+	<vector>
+	"Material.h"
+	"Element.h"
+
+1586768024 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\node.cpp
+	"Node.h"
+
+1586767554 c:\users\behroozkeshavarzi\documents\c++\truss\truss\node.h
+	<iostream>
+	<cmath>
+	<vector>
+
+1586769406 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\material.cpp
+	"Material.h"
+
+1586769384 c:\users\behroozkeshavarzi\documents\c++\truss\truss\material.h
+
+1586769990 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.cpp
+	"Element.h"
+
+1586770557 c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.h
+	<iostream>
+	<vector>
+	"Node.h"
+	"Material.h"
+
+1586771479 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\src\node.cpp
+	"Node.h"
+
+1586771466 c:\users\behroozkeshavarzi\documents\c++\truss\truss\include\node.h
+	<iostream>
+	<cmath>
+	<vector>
+
+1586771614 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\src\material.cpp
+	"Material.h"
+
+1586771605 c:\users\behroozkeshavarzi\documents\c++\truss\truss\include\material.h
+
+1586774644 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\src\element.cpp
+	"Element.h"
+	<iostream>
+
+1586774738 c:\users\behroozkeshavarzi\documents\c++\truss\truss\include\element.h
+	<iostream>
+	<vector>
+	"Node.h"
+	"Material.h"
+	<Eigen/Dense>
+
