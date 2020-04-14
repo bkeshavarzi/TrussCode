@@ -2,9 +2,15 @@
 #include <iostream>
 using namespace std;
 using namespace Eigen;
+
+static int counter=0;
+
 Element::Element()
 {
-    //ctor
+   id=0;
+   Node obj1,obj2;
+   A=0.002;
+
 }
 
 Element::Element(int i,vector <Node> obj,double Av,Material mat)
@@ -13,6 +19,7 @@ Element::Element(int i,vector <Node> obj,double Av,Material mat)
     nobj=obj; //Check to see reference type in vector class????
     A=Av;
     E=mat.GetE();
+    counter++;
     vector <double> cord1;
     vector <double> cord2;
     cord1=obj[0].getcord();
@@ -49,6 +56,10 @@ double Element:: GetA()
 void Element::SetA(double Av)
 {
     A=Av;
+}
+int Element::GetCounter()
+{
+    return counter;
 }
 Element::~Element()
 {

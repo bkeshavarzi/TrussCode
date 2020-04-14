@@ -5,12 +5,15 @@ Node::Node()
 {
     setcord(0.0,0.0);
     setid(0);
-    counter++;
+    rx=true;
+    ry=true;
 }
-Node::Node(int i, double x,double y)
+Node::Node(int i, double x,double y,bool xr,bool yr)
 {
     setcord(x,y);
     setid(i);
+    rx=xr;
+    ry=yr;
     counter++;
 }
 vector <double> Node::getcord()
@@ -36,6 +39,11 @@ void Node::setid(int i)
 int Node::getcounter()
 {
     return counter;
+}
+void Node::setres(bool xr,bool yr)
+{
+    rx=xr;
+    ry=yr;
 }
 Node::~Node()
 {

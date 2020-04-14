@@ -34,6 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ReadText.h" />
+		<Unit filename="TextFileReader.cpp" />
 		<Unit filename="include/Element.h" />
 		<Unit filename="include/Material.h" />
 		<Unit filename="include/Node.h" />
