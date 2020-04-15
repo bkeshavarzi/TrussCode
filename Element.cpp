@@ -1,49 +1,77 @@
 #include "Element.h"
+#include <iostream>
+using namespace std;
 
 Element::Element()
 {
     //ctor
 }
+Element::Element(int i,vector <Node> n,double Ae,Material m)
+{
+  setid(i);
+  setnode(n);
+  setA(Ae);
+  E=m.GetE();
 
-Element::Element(int i,vector <Node> obj,double Av,Material mat)
+  vector <double> cord1;
+  vector <double> cord2;
+  cord1=n[0].getcord();
+  cord2=n[1].getcord();
+  double dx=abs(cord1[0]-cord2[0]);
+  double dy=abs(cord1[1]-cord2[1]);
+  L=sqrt(pow(dx,2)+pow(dy,2));
+  MakeQ();
+  LocalS();
+}
+
+void Element :: MakeQ()
+{
+  vector <double> cord1=obj[0].getcord();
+  vector <double> cord2=obj[1].getcord();
+  double dx=abs(cord1[0]-cord2[0]);
+  double dy=abs(cord1[1]-cord2[1]);
+  double teta=atan(dy/dx);
+  Q(0,0)=cos(teta);
+  Q(1,0)=sin(teta);
+  Q(2,1)=cos(teta);
+  Q(3,1)=sin(teta);
+}
+void Element ::LocalS()
+{
+    double term=A*E/L;
+    Lsm(0,0)=term;
+    Lsm(0,1)=-1*term;
+    Lsm(1,0)=-1*term;
+    Lsm(1,1)=term;
+}
+MatrixXd Element::GlobalS()
+{
+    Gsm=Q*Lsm*Q.transpose();
+    return Gsm;
+}
+void Element::setid(int i)
 {
     id=i;
-    nobj=obj; //Check to see reference type in vector class????
-    A=Av;
-    E=mat.GetE();
-    vector <double> cord1;
-    vector <double> cord2;
-    cord1=obj[0].getcord();
-    cord2=obj[1].getcord();
-    double dx=abs(cord1[0]-cord2[0]);
-    double dy=abs(cord1[1]-cord2[1]);
-    L=sqrt(pow(dx,2)+pow(dy,2));
-
 }
-void Element::SetId(int i)
-{
-    id=i;
-}
-double Element:: GetId()
+int Element::getid()
 {
     return id;
 }
-vector <Node> Element:: GetNode()
+vector <Node> Element::getnode()
 {
-    return nobj;
+    return obj;
 }
-void Element::SetNode(vector <Node> obj)
+void Element::setnode(vector <Node> v)
 {
-    nobj.push_back(obj[0]);
-    nobj.push_back(obj[1]);
+    obj=v;
 }
-double Element:: GetA()
+double Element:: getA()
 {
     return A;
 }
-void Element::SetA(double Av)
+void Element::setA(double ar)
 {
-    A=Av;
+    A=ar;
 }
 Element::~Element()
 {

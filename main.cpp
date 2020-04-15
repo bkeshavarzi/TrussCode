@@ -9,9 +9,13 @@ using namespace std;
 
 int main()
 {
-    //vector <Node> NV=ReadNodeFile();
-    Material mat(2e9);
-    //ReadElementFile(NV);
-    Element obj;
-    //cout << EV.size() << endl;
+    vector <Node> NV=ReadNodeFile();
+    vector <Element> EV=ReadElementFile(NV);
+    vector <Node> n;
+    for (int i=0; i <EV.size(); i++)
+    {
+        n=EV[i].getnode();
+        cout << EV[i].getid() <<"\t"<<n[0].getid()<<"\t"<<n[1].getid()<< endl;
+    }
+
 }

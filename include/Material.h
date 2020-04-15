@@ -5,6 +5,7 @@
 class Material
 {
     public:
+        Material();
         Material(double);
         double GetE();
         virtual ~Material();

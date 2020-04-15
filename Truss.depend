@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1586900193 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\main.cpp
+1586946449 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\main.cpp
 	<iostream>
 	"Node.h"
 	<vector>
@@ -20,14 +20,17 @@
 
 1586769384 c:\users\behroozkeshavarzi\documents\c++\truss\truss\material.h
 
-1586769990 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.cpp
+1586947157 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.cpp
 	"Element.h"
-
-1586770557 c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.h
 	<iostream>
+
+1586946761 c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.h
+	<iostream>
+	<cmath>
 	<vector>
 	"Node.h"
 	"Material.h"
+	<Eigen/Dense>
 
 1586896255 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\src\node.cpp
 	"Node.h"
@@ -37,10 +40,10 @@
 	<cmath>
 	<vector>
 
-1586771614 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\src\material.cpp
+1586945802 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\src\material.cpp
 	"Material.h"
 
-1586771605 c:\users\behroozkeshavarzi\documents\c++\truss\truss\include\material.h
+1586945785 c:\users\behroozkeshavarzi\documents\c++\truss\truss\include\material.h
 
 1586900229 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\src\element.cpp
 	"Element.h"
@@ -53,10 +56,10 @@
 	"Material.h"
 	<Eigen/Dense>
 
-1586899644 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\textfilereader.cpp
+1586947196 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\textfilereader.cpp
 	"ReadText.h"
 
-1586898857 c:\users\behroozkeshavarzi\documents\c++\truss\truss\readtext.h
+1586946366 c:\users\behroozkeshavarzi\documents\c++\truss\truss\readtext.h
 	<iostream>
 	<string>
 	<fstream>

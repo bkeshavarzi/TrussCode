@@ -21,7 +21,7 @@ class Element
         void SetNode(vector <Node>);
         double GetA();
         void SetA(double);
-        int GetCounter();
+        //int GetCounter();
         virtual ~Element();
 
     protected:

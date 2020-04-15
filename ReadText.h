@@ -11,5 +11,5 @@ using namespace std;
 using namespace Eigen;
 
 vector <Node> ReadNodeFile();
-void ReadElementFile(vector <Node>);
+vector <Element> ReadElementFile(vector <Node>);
 #endif // READTEXT_H_INCLUDED

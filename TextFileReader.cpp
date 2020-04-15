@@ -30,37 +30,32 @@ vector <Node> ReadNodeFile()
 
 }
 
-void ReadElementFile(vector <Node> NV)
+vector <Element> ReadElementFile(vector <Node> NV)
 {
     ifstream fid ("Element.txt");
-    Element obj;
     if (!fid.is_open())
     {
-
       cout << "Can''t open the Element input file" << endl;
-
     } else {
-      cout << "Open the file :)))" <<endl;
       int id,inode,jnode;
       double A;
       vector <Node> temp;
       temp.push_back(NV[0]);
       temp.push_back(NV[1]);
+      Element obj;
       vector <Element> ElementVector;
-
-
       while (!fid.eof())
       {
          fid >> id >> inode >> jnode >> A;
-         obj.SetId(id);
-         cout << inode <<"\t"<<jnode<<endl;
+         obj.setid(id);
          temp[0]=NV[inode-1];temp[1]=NV[jnode-1];
-         obj.SetNode(temp);
-         obj.SetA(A);
+         obj.setnode(temp);
+         obj.setA(A);
          ElementVector.push_back(obj);
       }
       fid.close();
 
-      //return ElementVector;
+      return ElementVector;
     }
 }
+

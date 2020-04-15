@@ -34,13 +34,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Element.cpp" />
+		<Unit filename="Element.h" />
 		<Unit filename="ReadText.h" />
 		<Unit filename="TextFileReader.cpp" />
-		<Unit filename="include/Element.h" />
 		<Unit filename="include/Material.h" />
 		<Unit filename="include/Node.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Element.cpp" />
 		<Unit filename="src/Material.cpp" />
 		<Unit filename="src/Node.cpp" />
 		<Extensions>
