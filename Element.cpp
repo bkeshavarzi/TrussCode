@@ -46,6 +46,8 @@ void Element ::LocalS()
 }
 MatrixXd Element::GlobalS()
 {
+
+    cout << Q <<endl;
     Gsm=Q*Lsm*Q.transpose();
     return Gsm;
 }
@@ -73,6 +75,19 @@ void Element::setA(double ar)
 {
     A=ar;
 }
+/*
+vector <bool> Element::getres()
+{
+    vector <bool> ret,temp;
+    temp=obj[0].getresn();
+    ret.push_back(temp[0]);
+    ret.push_back(temp[1]);
+    temp=obj[1].getresn();
+    ret.push_back(temp[0]);
+    ret.push_back(temp[1]);
+    return ret;
+}
+*/
 Element::~Element()
 {
     //dtor

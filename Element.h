@@ -22,6 +22,7 @@ class Element
         void setnode(vector <Node>);
         double getA();
         void setA(double);
+        vector <bool> getres();
         void MakeQ();
         void LocalS();
         MatrixXd GlobalS();

@@ -19,8 +19,10 @@ vector <Node> ReadNodeFile()
       while (!fid.eof())
       {
           fid >> id >> xc >> yc >> xr >> yr;
+          cout <<static_cast <bool> (xr) <<static_cast <bool> (yr) <<endl;
           obj.setid(id);
           obj.setcord(xc,yc);
+          //obj.setres(xr,yr);
           NodalVector.push_back(obj);
           counter++;
       }
@@ -38,19 +40,17 @@ vector <Element> ReadElementFile(vector <Node> NV)
       cout << "Can''t open the Element input file" << endl;
     } else {
       int id,inode,jnode;
-      double A;
+      double A, E;
       vector <Node> temp;
       temp.push_back(NV[0]);
       temp.push_back(NV[1]);
-      Element obj;
       vector <Element> ElementVector;
       while (!fid.eof())
       {
-         fid >> id >> inode >> jnode >> A;
-         obj.setid(id);
+         fid >> id >> inode >> jnode >> A >> E;
+         Material mat(E);
          temp[0]=NV[inode-1];temp[1]=NV[jnode-1];
-         obj.setnode(temp);
-         obj.setA(A);
+         Element obj(id,temp,A,mat);
          ElementVector.push_back(obj);
       }
       fid.close();

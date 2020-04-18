@@ -5,15 +5,13 @@ Node::Node()
 {
     setcord(0.0,0.0);
     setid(0);
-    rx=true;
-    ry=true;
+    setres(true,true);
 }
 Node::Node(int i, double x,double y,bool xr,bool yr)
 {
     setcord(x,y);
     setid(i);
-    rx=xr;
-    ry=yr;
+    setres(xr,yr);
     counter++;
 }
 vector <double> Node::getcord()
@@ -44,6 +42,13 @@ void Node::setres(bool xr,bool yr)
 {
     rx=xr;
     ry=yr;
+}
+vector <bool> Node::GetRes()
+{
+   vector <bool> res;
+   res.push_back(rx);
+   res.push_back(ry);
+   return res;
 }
 Node::~Node()
 {

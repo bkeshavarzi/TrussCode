@@ -12,10 +12,11 @@ class Node
         Node();
         Node(int,double,double,bool,bool);
         vector <double> getcord();
+        vector <bool> GetRes(void);
         void setcord(double ,double);
         int getid();
         void setid(int);
-        int getcounter();
+        int getcounter(void);
         void setres(bool,bool);
         virtual ~Node();
 

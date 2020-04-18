@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1586946449 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\main.cpp
+1587211774 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\main.cpp
 	<iostream>
 	"Node.h"
 	<vector>
 	"Material.h"
 	"Element.h"
 	"ReadText.h"
+	"GlobalStiffness.h"
 
 1586768024 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\node.cpp
 	"Node.h"
@@ -20,11 +21,11 @@
 
 1586769384 c:\users\behroozkeshavarzi\documents\c++\truss\truss\material.h
 
-1586947157 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.cpp
+1587211241 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.cpp
 	"Element.h"
 	<iostream>
 
-1586946761 c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.h
+1587210845 c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.h
 	<iostream>
 	<cmath>
 	<vector>
@@ -32,10 +33,10 @@
 	"Material.h"
 	<Eigen/Dense>
 
-1586896255 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\src\node.cpp
+1587212048 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\src\node.cpp
 	"Node.h"
 
-1586896197 c:\users\behroozkeshavarzi\documents\c++\truss\truss\include\node.h
+1587211536 c:\users\behroozkeshavarzi\documents\c++\truss\truss\include\node.h
 	<iostream>
 	<cmath>
 	<vector>
@@ -56,7 +57,7 @@
 	"Material.h"
 	<Eigen/Dense>
 
-1586947196 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\textfilereader.cpp
+1587212253 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\textfilereader.cpp
 	"ReadText.h"
 
 1586946366 c:\users\behroozkeshavarzi\documents\c++\truss\truss\readtext.h
@@ -69,6 +70,18 @@
 	"Element.h"
 
 1586896987 c:\users\behroozkeshavarzi\documents\c++\truss\truss\textfilereader.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<vector>
+	<Eigen/Dense>
+	"Node.h"
+	"Element.h"
+
+1587210220 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\globalstiffnessmatrix.cpp
+	"GlobalStiffness.h"
+
+1587208892 c:\users\behroozkeshavarzi\documents\c++\truss\truss\globalstiffness.h
 	<iostream>
 	<string>
 	<fstream>
