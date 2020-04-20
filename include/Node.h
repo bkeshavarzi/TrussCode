@@ -17,6 +17,7 @@ class Node
         void setid(int);
         int getcounter();
         void setres(bool,bool);
+        vector <bool> getres();
         virtual ~Node();
 
     protected:

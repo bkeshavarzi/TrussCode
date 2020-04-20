@@ -34,9 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="AssembleStiffnessMatrix.cpp" />
 		<Unit filename="Element.cpp" />
 		<Unit filename="Element.h" />
 		<Unit filename="ReadText.h" />
+		<Unit filename="StiffnessMatrix.h" />
 		<Unit filename="TextFileReader.cpp" />
 		<Unit filename="include/Material.h" />
 		<Unit filename="include/Node.h" />

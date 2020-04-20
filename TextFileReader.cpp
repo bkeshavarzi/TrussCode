@@ -7,7 +7,8 @@ vector <Node> ReadNodeFile()
   if (!fid.is_open())
   {
       cout << "Can''t open the Node input file" << endl;
-
+      vector <Node> NodalVector;
+      return NodalVector;
   } else {
 
       int id;
@@ -21,6 +22,7 @@ vector <Node> ReadNodeFile()
           fid >> id >> xc >> yc >> xr >> yr;
           obj.setid(id);
           obj.setcord(xc,yc);
+          obj.setres(xr,yr);
           NodalVector.push_back(obj);
           counter++;
       }

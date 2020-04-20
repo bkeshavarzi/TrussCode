@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1586946449 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\main.cpp
+1587341992 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\main.cpp
 	<iostream>
 	"Node.h"
 	<vector>
 	"Material.h"
 	"Element.h"
 	"ReadText.h"
+	<algorithm>
 
 1586768024 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\node.cpp
 	"Node.h"
@@ -20,11 +21,11 @@
 
 1586769384 c:\users\behroozkeshavarzi\documents\c++\truss\truss\material.h
 
-1586947157 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.cpp
+1587227654 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.cpp
 	"Element.h"
 	<iostream>
 
-1586946761 c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.h
+1587322226 c:\users\behroozkeshavarzi\documents\c++\truss\truss\element.h
 	<iostream>
 	<cmath>
 	<vector>
@@ -32,10 +33,10 @@
 	"Material.h"
 	<Eigen/Dense>
 
-1586896255 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\src\node.cpp
+1587340614 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\src\node.cpp
 	"Node.h"
 
-1586896197 c:\users\behroozkeshavarzi\documents\c++\truss\truss\include\node.h
+1587340034 c:\users\behroozkeshavarzi\documents\c++\truss\truss\include\node.h
 	<iostream>
 	<cmath>
 	<vector>
@@ -56,16 +57,16 @@
 	"Material.h"
 	<Eigen/Dense>
 
-1586947196 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\textfilereader.cpp
+1587322268 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\textfilereader.cpp
 	"ReadText.h"
 
-1586946366 c:\users\behroozkeshavarzi\documents\c++\truss\truss\readtext.h
+1587321743 c:\users\behroozkeshavarzi\documents\c++\truss\truss\readtext.h
 	<iostream>
-	<string>
-	<fstream>
+	<cmath>
 	<vector>
-	<Eigen/Dense>
+	<fstream>
 	"Node.h"
+	"Material.h"
 	"Element.h"
 
 1586896987 c:\users\behroozkeshavarzi\documents\c++\truss\truss\textfilereader.cpp
@@ -75,5 +76,15 @@
 	<vector>
 	<Eigen/Dense>
 	"Node.h"
+	"Element.h"
+
+1587343916 source:c:\users\behroozkeshavarzi\documents\c++\truss\truss\assemblestiffnessmatrix.cpp
+	"StiffnessMatrix.h"
+
+1587343349 c:\users\behroozkeshavarzi\documents\c++\truss\truss\stiffnessmatrix.h
+	<iostream>
+	"Node.h"
+	<vector>
+	"Material.h"
 	"Element.h"
 

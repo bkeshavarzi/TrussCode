@@ -45,6 +45,13 @@ void Node::setres(bool xr,bool yr)
     rx=xr;
     ry=yr;
 }
+vector <bool> Node::getres()
+{
+    vector <bool> temp;
+    temp.push_back(rx);
+    temp.push_back(ry);
+    return temp;
+}
 Node::~Node()
 {
     //dtor

@@ -1,15 +1,14 @@
 #ifndef READTEXT_H_INCLUDED
 #define READTEXT_H_INCLUDED
 #include <iostream>
-#include <string>
-#include <fstream>
+#include <cmath>
 #include <vector>
-#include <Eigen/Dense>
+#include <fstream>
 #include "Node.h"
+#include "Material.h"
 #include "Element.h"
-using namespace std;
-using namespace Eigen;
 
 vector <Node> ReadNodeFile();
 vector <Element> ReadElementFile(vector <Node>);
+
 #endif // READTEXT_H_INCLUDED
