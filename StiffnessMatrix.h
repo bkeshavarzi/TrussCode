@@ -10,5 +10,5 @@ using namespace std;
 using namespace Eigen;
 
 MatrixXd GlobalStiffnessMatrix(vector <Node>,vector <Element>);
-//MatrixXd CondensedGlobalStiffnessMatrix(vector <Node>,vector <Element>,MatrixXd);
+MatrixXd CondensedGlobalStiffnessMatrix(vector <Node>,vector <Element>,MatrixXd);
 #endif // STIFFNESSMATRIX_H_INCLUDED

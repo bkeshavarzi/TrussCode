@@ -25,33 +25,30 @@ MatrixXd GlobalStiffnessMatrix(vector <Node> NV,vector <Element> EV)
         }
     }
 }
-/*
+
 MatrixXd CondensedGlobalStiffnessMatrix(vector <Node> NV,vector <Element> EV,MatrixXd KG)
 {
     int inode,jnode;
-    MatrixXd FK;
     vector <Node> NOV;
     vector <bool> res;
-    vector <int> id;
-    vector<int>::iterator it;
-    for (int ielem=0;ielem<EV.size();ielem++)
+    vector <int> resdof;
+    vector <int> freedof;
+    for (int inode=NV.size()-1;inode>-1;inode--)
     {
-        NOV=EV[ielem].getnode();
-        inode=NOV[0].getid();
-        jnode=NOV[1].getid();
-        res=NOV[0].getres();
-        if (res[0]==true) id.push_back(2*(inode-1));
-        if (res[1]==true) id.push_back(2*(inode-1)+1);
-        res=NOV[1].getres();
-        if (res[0]==true) id.push_back(2*(jnode-1));
-        if (res[1]==true) id.push_back(2*(jnode-1)+1);
+        res=NV[inode].getres();
+        if (res[1]==false) freedof.push_back(2*(NV[inode].getid()-1)+1);
+        if (res[0]==false) freedof.push_back(2*(NV[inode].getid()-1));
     }
-
-    sort(id.begin(),id.end(),myfunction);
-    it=unique(id.begin(),id.end());
-    id.resize(distance(id.begin(), it));
-    for (it = id.begin(); it != id.end(); ++it) {
-        cout << *it << " ";   //You should check to see they are restrained or not
+    int icounter=0,jcounter=0;
+    MatrixXd FK=MatrixXd::Zero(2*NV.size()-resdof.size(),2*NV.size()-resdof.size());
+    for (int idof=0;idof<freedof.size();idof++)
+    {
+        for (int jdof=0;jdof<freedof.size();jdof++)
+        {
+            FK(icounter,jcounter)=KG(idof,jdof);
+            jcounter++;
+        }
+        icounter++;
+        jcounter=0;
     }
 }
-*/
