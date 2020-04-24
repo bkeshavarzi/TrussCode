@@ -18,6 +18,8 @@ class Node
         int getcounter();
         void setres(bool,bool);
         vector <bool> getres();
+        void setforce(double,double);
+        vector <double> getforce(void);
         virtual ~Node();
 
     protected:
@@ -27,6 +29,7 @@ class Node
         double x,y;
         int id;
         bool rx,ry;
+        double fx,fy;
         //static int counter;
 };
 

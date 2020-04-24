@@ -88,3 +88,61 @@
 	"Material.h"
 	"Element.h"
 
+1587769231 source:c:\users\behroozkeshavarzi\dropbox\my pc (behroozkeshavar)\documents\c++\truss\truss\assemblestiffnessmatrix.cpp
+	"StiffnessMatrix.h"
+
+1587768998 c:\users\behroozkeshavarzi\dropbox\my pc (behroozkeshavar)\documents\c++\truss\truss\stiffnessmatrix.h
+	<iostream>
+	"Node.h"
+	<vector>
+	"Material.h"
+	"Element.h"
+
+1587764184 c:\users\behroozkeshavarzi\dropbox\my pc (behroozkeshavar)\documents\c++\truss\truss\include\node.h
+	<iostream>
+	<cmath>
+	<vector>
+
+1586945785 c:\users\behroozkeshavarzi\dropbox\my pc (behroozkeshavar)\documents\c++\truss\truss\include\material.h
+
+1587322226 c:\users\behroozkeshavarzi\dropbox\my pc (behroozkeshavar)\documents\c++\truss\truss\element.h
+	<iostream>
+	<cmath>
+	<vector>
+	"Node.h"
+	"Material.h"
+	<Eigen/Dense>
+
+1587765794 source:c:\users\behroozkeshavarzi\dropbox\my pc (behroozkeshavar)\documents\c++\truss\truss\element.cpp
+	"Element.h"
+	<iostream>
+
+1587769007 source:c:\users\behroozkeshavarzi\dropbox\my pc (behroozkeshavar)\documents\c++\truss\truss\main.cpp
+	<iostream>
+	<vector>
+	<cmath>
+	"Node.h"
+	"Material.h"
+	"Element.h"
+	"ReadText.h"
+	<algorithm>
+	"StiffnessMatrix.h"
+
+1587768851 c:\users\behroozkeshavarzi\dropbox\my pc (behroozkeshavar)\documents\c++\truss\truss\readtext.h
+	<iostream>
+	<cmath>
+	<vector>
+	<fstream>
+	"Node.h"
+	"Material.h"
+	"Element.h"
+
+1586945802 source:c:\users\behroozkeshavarzi\dropbox\my pc (behroozkeshavar)\documents\c++\truss\truss\src\material.cpp
+	"Material.h"
+
+1587764626 source:c:\users\behroozkeshavarzi\dropbox\my pc (behroozkeshavar)\documents\c++\truss\truss\src\node.cpp
+	"Node.h"
+
+1587768810 source:c:\users\behroozkeshavarzi\dropbox\my pc (behroozkeshavar)\documents\c++\truss\truss\textfilereader.cpp
+	"ReadText.h"
+

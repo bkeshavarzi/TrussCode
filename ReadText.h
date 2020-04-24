@@ -10,5 +10,6 @@
 
 vector <Node> ReadNodeFile();
 vector <Element> ReadElementFile(vector <Node>);
+vector <double> ReadForceFile(vector <Node>);
 
 #endif // READTEXT_H_INCLUDED

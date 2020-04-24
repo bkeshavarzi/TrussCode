@@ -15,6 +15,7 @@ Node::Node(int i, double x,double y,bool xr,bool yr)
     rx=xr;
     ry=yr;
     counter++;
+    cout << "Making new object in Node class, id ="<<i<<endl;
 }
 vector <double> Node::getcord()
 {
@@ -50,6 +51,19 @@ vector <bool> Node::getres()
     vector <bool> temp;
     temp.push_back(rx);
     temp.push_back(ry);
+    return temp;
+}
+
+void Node::setforce(double xf,double yf)
+{
+    fx=xf;
+    fy=yf;
+}
+vector <double> Node::getforce(void)
+{
+    vector <double> temp;
+    temp.push_back(fx);
+    temp.push_back(fy);
     return temp;
 }
 Node::~Node()

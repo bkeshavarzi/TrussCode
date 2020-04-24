@@ -1,17 +1,21 @@
 #include <iostream>
-#include "Node.h"
 #include <vector>
+#include <cmath>
+#include "Node.h"
 #include "Material.h"
 #include "Element.h"
 #include "ReadText.h"
 #include <algorithm>
+#include "StiffnessMatrix.h"
 
 using namespace std;
 
-//bool myfunction (int i,int j) { return (i>j); }
 int main()
 {
-    MatrixXd a;
-    a=MatrixXd::Zero(3,3);
-    //matrix.block(i,j,p,q);
+    vector <Node> NV=ReadNodeFile();
+    vector <Element> EV=ReadElementFile(NV);
+    vector <double> FV= ReadForceFile(NV);
+    MatrixXd KG=GlobalStiffnessMatrix(NV,EV);
+    MatrixXd FK=CondensedGlobalStiffnessMatrix(NV,EV,KG);
+    MatrixXd F=CondensedForceVector(NV,FV);
 }
